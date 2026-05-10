@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'core/theme/app_theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,14 +11,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Rumah Sakit Viamedika',
       debugShowCheckedModeBanner: false,
-      title: 'Nama Project',
-      theme: ThemeData(
-        fontFamily: 'Poppins',
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-        useMaterial3: true,
+      theme: AppTheme.lightTheme,
+      home: const Scaffold(
+        body: Center(
+          child: Text(
+            'Setup Core Berhasil!',
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          ),
+        ),
       ),
-      home: const Scaffold(body: Center(child: Text("Project Initialized"))),
     );
   }
 }
