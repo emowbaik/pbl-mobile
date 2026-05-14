@@ -24,12 +24,14 @@ dependencies:
   intl: ^0.19.0 # Untuk memformat tanggal
   shared_preferences: ^2.2.3 # Untuk menyimpan data lokal
   cupertino_icons: ^1.0.8 # Untuk memanggil ikon ios
+  dice_bear: ^1.0.3 # Untuk generate avatar profil DiceBear
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   flutter_lints: ^6.0.0
+  flutter_native_splash: ^2.4.0
 
 flutter:
   uses-material-design: true
@@ -87,3 +89,17 @@ flutter:
         - asset: assets/fonts/Poppins-BlackItalic.ttf
           weight: 900
           style: italic
+
+flutter_native_splash:
+  background_image: assets/images/splash_bg_gradient.png
+  image: assets/images/logo_white.png
+  android_gravity: center
+  ios_content_mode: center
+
+
+  fullscreen: true
+
+  # 3. Konfigurasi Khusus Android 12+ (Wajib)
+  android_12:
+    image: assets/images/logo_white_splash_screen.png
+    color: "#249E94"

@@ -14,4 +14,17 @@ class AppColors {
   static const Color success = Color(0xFF4CAF50);
   static const Color error = Color(0xFFD32F2F);
   static const Color warning = Color(0xFFFBC02D);
+
+  // Gradient
+  static const LinearGradient gradientSecondaryToPrimary = LinearGradient(
+    colors: [secondary, primary],
+    begin: Alignment.centerLeft,
+    end: Alignment.centerRight,
+  );
+
+  static const LinearGradient gradientAccentToSecondary = LinearGradient(
+    colors: [accent, secondary],
+    begin: Alignment.centerLeft,
+    end: Alignment.centerRight,
+  );
 }
