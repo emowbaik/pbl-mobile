@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import '../../core/constants/app_colors.dart';
 import '../../features/home/screens/home_screen.dart';
-// Import screen lainnya nanti saat sudah dibuat
-// import '../../features/history/screens/history_screen.dart';
-// import '../../features/data/screens/data_screen.dart';
+import '../../features/history/screens/history_screen.dart';
+import '../../features/patient/screens/patient_data_screen.dart';
 // import '../../features/report/screens/report_screen.dart';
 
 class MainNavWrapper extends StatefulWidget {
@@ -19,8 +18,8 @@ class _MainNavWrapperState extends State<MainNavWrapper> {
   // Daftar halaman sesuai menu di gambar "Mobile - Antrian Perawat.png"
   final List<Widget> _pages = [
     const HomeScreen(),
-    const _PlaceholderPage(title: "Riwayat", icon: Icons.assignment_outlined),
-    const _PlaceholderPage(title: "Data", icon: Icons.people_outline),
+    const HistoryScreen(),
+    const PatientDataScreen(),
     const _PlaceholderPage(title: "Laporan", icon: Icons.bar_chart_rounded),
   ];
 
